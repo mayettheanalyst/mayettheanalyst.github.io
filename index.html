@@ -1,147 +1,92 @@
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Mayet The Analyst</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name | Data Analyst & Creator Growth Strategist</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --text: #e2e8f0;
+      --accent: #38bdf8;
+      --muted: #94a3b8;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
+    header { text-align: center; padding: 3rem 0 2rem; }
+    h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
+    .tagline { color: var(--accent); font-size: 1.1rem; margin-bottom: 1rem; }
+    .btn { display: inline-block; background: var(--accent); color: #000; padding: 0.6rem 1.2rem; border-radius: 6px; text-decoration: none; font-weight: 500; margin: 0.3rem; }
+    .btn:hover { opacity: 0.9; }
+    section { margin: 3rem 0; }
+    h2 { border-bottom: 2px solid var(--accent); padding-bottom: 0.5rem; margin-bottom: 1.2rem; }
+    .project, .service { background: var(--card); padding: 1.2rem; border-radius: 8px; margin-bottom: 1rem; }
+    .project h3, .service h3 { color: var(--accent); margin-bottom: 0.5rem; }
+    .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 0.5rem; }
+    footer { text-align: center; padding: 2rem 0; color: var(--muted); font-size: 0.9rem; border-top: 1px solid #334155; margin-top: 2rem; }
+    @media (max-width: 600px) { h1 { font-size: 1.8rem; } .btn { display: block; text-align: center; margin: 0.5rem 0; } }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>[Your Full Name]</h1>
+      <p class="tagline">Data Analyst → Turning messy data into growth strategies for Ethiopian creators & businesses</p>
+      <a href="#projects" class="btn">View Projects</a>
+      <a href="#contact" class="btn">Get in Touch</a>
+    </header>
 
-		<!-- Wrapper -->
-			<div id="wrapper" class="fade-in">
-
-				<!-- Intro -->
-					<!-- Intro -->
-				    <div id="intro">
-				        <h1>Mayet The Analyst</h1>
-				        <p>Data Analyst specializing in Python, SQL, and Data Quality Assurance. 
-				           Proven ability to build validation tools, automate workflows, and derive insights from complex datasets.</p>
-				        <ul class="actions">
-				            <li><a href="#main" class="button icon solid solo fa-arrow-down scrolly">View My Work</a></li>
-				        </ul>
-				    </div>
-
-				<!-- Header -->
-					<header id="header">
-						<a href="index.html" class="logo">Mayet The Analyst</a>
-					</header>
-
-				<!-- Nav -->
-					<nav id="nav">
-						<ul class="links">
-							<li class="active"><a href="index.html">Projects</a></li>
-							<li><a href="generic.html">Bio</a></li>
-
-						</ul>
-						<ul class="icons">
-							
-									<li><a href="https://www.linkedin.com/in/mayetmelkam-meaza-6b5440138 " class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
-									<li><a href="https://github.com/mayettheanalyst/Portfolio_Projects" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-						</ul>
-					</nav>
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Featured Post -->
-							<!-- Featured Post -->
-					    <article class="post featured">
-					        <header class="major">
-					            <h2><a href="#">Data Quality Audit Tool</a></h2>
-					            <p>Python script that validated 714+ records using 5 business logic rules. Flagged 1% of data for inconsistencies.</p>
-					        </header>
-					        <a href="#" class="image main"><img src="images/pic01.jpg" alt="" /></a> 
-					        <!-- NOTE: If you don't have pic01.jpg, upload a screenshot of your code or use images/pic02.jpg -->
-					        <ul class="actions special">
-					            <a href="https://github.com/mayettheanalyst/data-quality-audit" class="button large">View Project</a>
-					        </ul>
-					    </article>
-
-						<!-- Posts -->
-							<!-- Posts -->
-    <section class="posts">
-        <!-- Project 2: SQL Covid Exploration (Your existing work) -->
-        <article>
-            <header>
-                <h2><a href="#">COVID-19 Data Exploration</a></h2>
-            </header>
-            <a href="#" class="image fit"><img src="images/covid-19.jpg" alt="" /></a>
-            <p>SQL-based data exploration analyzing global pandemic trends, vaccination rates, and mortality statistics.</p>
-            <ul class="actions special">
-                <li><a href="https://github.com/mayettheanalyst/Portfolio_Projects/blob/main/Covid%20SQL%20For%20Portifolio.sql" class="button">View Code</a></li>
-            </ul>
-        </article>
-
-        <!-- Project 3: Placeholder for Annotation Project (We will fill this next) -->
-        <article>
-            <header>
-                <h2><a href="#">Text Annotation & Categorization</a></h2>
-            </header>
-            <a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-            <p>Coming Soon: AI training data annotation tool using Python taxonomies and quality control rubrics.</p>
-            <ul class="actions special">
-                <li><a href="#" class="button disabled">In Progress</a></li>
-            </ul>
-        </article>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>I clean, analyze, and visualize data so businesses and content creators stop guessing and start growing. Skilled in Excel, SQL, Python, Power BI, and Tableau. Based in Ethiopia, working globally.</p>
     </section>
-						<section class="alt">
-						    <h3>Location</h3>
-						    <p>Remote / United Arab Emirates<br />
-						        Available for Global Remote Roles</p>
-						</section>
 
-								
+    <section id="services">
+      <h2>What I Offer</h2>
+      <div class="service">
+        <h3>📊 TikTok Growth Audits</h3>
+        <p>Data-backed reports on posting times, content performance, hashtag strategy, and engagement patterns. Delivered as PDF + actionable insights.</p>
+      </div>
+      <div class="service">
+        <h3>🧹 Data Cleaning & Automation</h3>
+        <p>Turn messy spreadsheets, APIs, or CSVs into clean, analysis-ready datasets using Python & SQL.</p>
+      </div>
+      <div class="service">
+        <h3>📈 Dashboard & Reporting</h3>
+        <p>Interactive Power BI/Tableau dashboards for tracking sales, social metrics, or business KPIs.</p>
+      </div>
+    </section>
 
+    <section id="projects">
+      <h2>Featured Projects</h2>
+      <div class="project">
+        <h3>📁 TikTok Performance Analysis Toolkit</h3>
+        <p class="meta">Python • Pandas • GitHub</p>
+        <p>Script that analyzes posting time, hashtags, and content type vs. engagement. Outputs top insights for creators.</p>
+        <a href="https://github.com/yourusername/tiktok-analysis" target="_blank" class="btn">View Code</a>
+      </div>
+      <div class="project">
+        <h3>📁 Ethiopian Sales Dashboard</h3>
+        <p class="meta">Power BI • SQL • Mock Retail Data</p>
+        <p>Interactive dashboard tracking regional sales, top products, and seasonal trends. Built for small business decision-making.</p>
+        <a href="https://github.com/yourusername/sales-dashboard" target="_blank" class="btn">View Code</a>
+      </div>
+    </section>
 
+    <section id="contact">
+      <h2>Let's Work Together</h2>
+      <p>Open to freelance data projects, TikTok growth audits, and local company collaborations.</p>
+      <p>📧 Email: <a href="mailto:youremail@example.com" style="color: var(--accent);">youremail@example.com</a></p>
+      <p>💼 GitHub: <a href="https://github.com/yourusername" target="_blank" style="color: var(--accent);">github.com/yourusername</a></p>
+      <p>🔗 LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" style="color: var(--accent);">linkedin.com/in/yourprofile</a></p>
+    </section>
 
-						
-						<section class="split contact">
-							<section class="alt">
-								<h3>Address</h3>
-								<p>Meskel Flower, Addis Ababa<br />
-									Addis Ababa, Ethiopia</p>
-							</section>
-							<section>
-								<h3>Phone</h3>
-								<p><a href="#">(251) 929-037142</a></p>
-							</section>
-							<section>
-								<h3>Email</h3>
-								<p><a href="#">mayetmelkammeaza@gmail.com</a></p>
-							</section>
-							<section>
-								<h3>Social</h3>
-								<ul class="icons alt">
-									
-									<li><a href="https://www.linkedin.com/in/mayetmelkam-meaza-6b5440138 " class="icon brands alt fa-linkedin"><span class="label">linkedin</span></a></li>
-									<li><a href="https://github.com/mayettheanalyst/Portfolio_Projects" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</section>
-						</section>
-					</footer>
-
-				<!-- Copyright -->
-					<div id="copyright">
-						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
-
-			</div>
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-
-	</body>
+    <footer>
+      © <span id="year"></span> [Your Name]. Built with HTML/CSS on GitHub Pages.
+    </footer>
+  </div>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
 </html>
