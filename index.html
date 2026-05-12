@@ -3,90 +3,252 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MayetTheAnalyst | Data Analyst & Creator Growth Strategist</title>
+  <title>Data That Drives Growth | Portfolio</title>
   <style>
-    :root {
-      --bg: #0f172a;
-      --card: #1e293b;
-      --text: #e2e8f0;
-      --accent: #38bdf8;
-      --muted: #94a3b8;
+    * { 
+      box-sizing: border-box; 
+      margin: 0; 
+      padding: 0; 
     }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
-    .container { max-width: 900px; margin: 0 auto; padding: 2rem 1.5rem; }
-    header { text-align: center; padding: 3rem 0 2rem; }
-    h1 { font-size: 2.2rem; margin-bottom: 0.5rem; }
-    .tagline { color: var(--accent); font-size: 1.1rem; margin-bottom: 1rem; }
-    .btn { display: inline-block; background: var(--accent); color: #000; padding: 0.6rem 1.2rem; border-radius: 6px; text-decoration: none; font-weight: 500; margin: 0.3rem; }
-    .btn:hover { opacity: 0.9; }
-    section { margin: 3rem 0; }
-    h2 { border-bottom: 2px solid var(--accent); padding-bottom: 0.5rem; margin-bottom: 1.2rem; }
-    .project, .service { background: var(--card); padding: 1.2rem; border-radius: 8px; margin-bottom: 1rem; }
-    .project h3, .service h3 { color: var(--accent); margin-bottom: 0.5rem; }
-    .meta { color: var(--muted); font-size: 0.9rem; margin-bottom: 0.5rem; }
-    footer { text-align: center; padding: 2rem 0; color: var(--muted); font-size: 0.9rem; border-top: 1px solid #334155; margin-top: 2rem; }
-    @media (max-width: 600px) { h1 { font-size: 1.8rem; } .btn { display: block; text-align: center; margin: 0.5rem 0; } }
+    
+    body { 
+      font-family: 'Inter', system-ui, -apple-system, sans-serif; 
+      background: #0a0a0a; 
+      color: #fafafa; 
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Animated Background Grid */
+    .bg-grid {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+      background-size: 50px 50px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .container { 
+      max-width: 1100px; 
+      margin: 0 auto; 
+      padding: 3rem 2rem;
+      position: relative;
+      z-index: 1;
+    }
+    
+    /* Hero with Dynamic Elements */
+    header { 
+      min-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;      align-items: center;
+      text-align: center;
+      position: relative;
+    }
+
+    /* Floating Orbs */
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.4;
+      animation: float 20s infinite ease-in-out;
+      z-index: -1;
+    }
+
+    .orb-1 {
+      width: 400px;
+      height: 400px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      top: 10%;
+      left: -10%;
+      animation-delay: 0s;
+    }
+
+    .orb-2 {
+      width: 300px;
+      height: 300px;
+      background: linear-gradient(135deg, #f093fb, #f5576c);
+      bottom: 10%;
+      right: -5%;
+      animation-delay: -5s;
+    }
+
+    .orb-3 {
+      width: 250px;
+      height: 250px;
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      top: 50%;
+      right: 10%;
+      animation-delay: -10s;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translate(0, 0) scale(1); }
+      33% { transform: translate(30px, -50px) scale(1.1); }
+      66% { transform: translate(-20px, 30px) scale(0.9); }
+    }
+
+    /* Name with Reveal Animation */
+    h1 {       font-size: 4rem; 
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.5rem;
+      opacity: 0;
+      animation: revealUp 1s ease-out forwards;
+      background: linear-gradient(135deg, #fff 0%, #a5b4fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .tagline { 
+      color: #94a3b8; 
+      font-size: 1.3rem; 
+      max-width: 650px; 
+      margin: 0 auto 2.5rem;
+      opacity: 0;
+      animation: revealUp 1s ease-out 0.2s forwards;
+      line-height: 1.7;
+    }
+
+    /* Dynamic Button */
+    .cta-button { 
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: transparent;
+      color: #fff;
+      padding: 1rem 2.5rem;
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 50px;
+      text-decoration: none; 
+      font-weight: 600; 
+      font-size: 1rem;
+      overflow: hidden;
+      opacity: 0;
+      animation: revealUp 1s ease-out 0.4s forwards;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;      background: linear-gradient(90deg, #667eea, #764ba2);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: -1;
+    }
+
+    .cta-button:hover {
+      border-color: transparent;
+      transform: translateY(-3px);
+      box-shadow: 0 20px 40px rgba(102, 126, 234, 0.4);
+    }
+
+    .cta-button:hover::before {
+      opacity: 1;
+    }
+
+    .cta-button::after {
+      content: '→';
+      transition: transform 0.3s ease;
+    }
+
+    .cta-button:hover::after {
+      transform: translateX(5px);
+    }
+
+    /* Scroll Indicator */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 3rem;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0;
+      animation: fadeIn 1s ease-out 1s forwards, bounce 2s infinite;
+    }
+
+    .scroll-indicator::before {
+      content: '';
+      display: block;
+      width: 24px;
+      height: 40px;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-radius: 20px;
+      position: relative;
+    }
+
+    .scroll-indicator::after {
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: 50%;      transform: translateX(-50%);
+      width: 4px;
+      height: 8px;
+      background: rgba(255,255,255,0.6);
+      border-radius: 2px;
+      animation: scrollDown 2s infinite;
+    }
+
+    @keyframes revealUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(10px); }
+    }
+
+    @keyframes scrollDown {
+      0% { opacity: 1; transform: translateX(-50%) translateY(0); }
+      100% { opacity: 0; transform: translateX(-50%) translateY(15px); }
+    }
+
+    /* Mobile */
+    @media (max-width: 768px) { 
+      h1 { font-size: 2.5rem; }
+      .tagline { font-size: 1.1rem; }
+      .orb { display: none; }
+    }
   </style>
 </head>
 <body>
+  <div class="bg-grid"></div>
+  
   <div class="container">
     <header>
-      <h1>Mayet The Analyst</h1>
-      <p class="tagline">Data Analyst → Turning messy data into growth strategies for Ethiopian creators & businesses</p>
-      <a href="#projects" class="btn">View Projects</a>
-      <a href="#contact" class="btn">Get in Touch</a>
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+            <h1>[Your Name]</h1>
+      <p class="tagline">I turn raw data into clear growth strategies for creators & businesses. See what data can actually do.</p>
+      <a href="#projects" class="cta-button">See My Work</a>
+      
+      <div class="scroll-indicator"></div>
     </header>
-
-    <section id="about">
-      <h2>About Me</h2>
-      <p>I clean, analyze, and visualize data so businesses and content creators stop guessing and start growing. Skilled in Excel, SQL, Python, Power BI, and Tableau. Based in Ethiopia, working globally.</p>
-    </section>
-
-    <section id="services">
-      <h2>What I Offer</h2>
-      <div class="service">
-        <h3>📊 TikTok Growth Audits</h3>
-        <p>Data-backed reports on posting times, content performance, hashtag strategy, and engagement patterns. Delivered as PDF + actionable insights.</p>
-      </div>
-      <div class="service">
-        <h3>🧹 Data Cleaning & Automation</h3>
-        <p>Turn messy spreadsheets, APIs, or CSVs into clean, analysis-ready datasets using Python & SQL.</p>
-      </div>
-      <div class="service">
-        <h3>📈 Dashboard & Reporting</h3>
-        <p>Interactive Power BI/Tableau dashboards for tracking sales, social metrics, or business KPIs.</p>
-      </div>
-    </section>
-
-    <section id="projects">
-      <h2>Featured Projects</h2>
-      <div class="project">
-        <h3>📁 TikTok Performance Analysis Toolkit</h3>
-        <p class="meta">Python • Pandas • GitHub</p>
-        <p>Script that analyzes posting time, hashtags, and content type vs. engagement. Outputs top insights for creators.</p>
-        <a href="https://github.com/yourusername/tiktok-analysis" target="_blank" class="btn">View Code</a>
-      </div>
-      <div class="project">
-        <h3>📁 Ethiopian Sales Dashboard</h3>
-        <p class="meta">Power BI • SQL • Mock Retail Data</p>
-        <p>Interactive dashboard tracking regional sales, top products, and seasonal trends. Built for small business decision-making.</p>
-        <a href="https://github.com/yourusername/sales-dashboard" target="_blank" class="btn">View Code</a>
-      </div>
-    </section>
-
-    <section id="contact">
-      <h2>Let's Work Together</h2>
-      <p>Open to freelance data projects, TikTok growth audits, and local company collaborations.</p>
-      <p>📧 Email: <a href="mailto:youremail@example.com" style="color: var(--accent);">mayetmelkammeaza@gmail.com</a></p>
-      <p>💼 GitHub: <a href="https://github.com/yourusername" target="_blank" style="color: var(--accent);">github.com/mayettheanalyst</a></p>
-      <p>🔗 LinkedIn: <a href="https://linkedin.com/in/yourprofile" target="_blank" style="color: var(--accent);">linkedin.com/in/yourprofile</a></p>
-    </section>
-
-    <footer>
-      © <span id="year"></span> Mayetmelkam. Built with HTML/CSS on GitHub Pages.
-    </footer>
   </div>
-  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
 </body>
 </html>
